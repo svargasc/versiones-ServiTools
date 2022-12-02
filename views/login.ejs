@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="public/img/logo.png" type="image/x-icon">
+    <title>Iniciar</title>
+    <style>
+        body{
+            margin: 0;
+            background-image: url(public/img/fondo.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        header{
+           background:rgba(0, 0, 0, 0.842);
+           text-align: center; 
+           height: 100px;
+           
+        }
+        header img{
+            width: 120px;
+            height: 120px;
+            float: left;
+            padding: 5px;
+            margin-left: 15%;
+        }
+        header h1{
+            background: linear-gradient(to left,rgb(4, 0, 255)10%,rgb(123, 220, 245)90%,rgb(255, 255, 255));
+            -webkit-background-clip: text;
+            color: transparent;
+            padding: 0;
+            margin: 0;    
+            /*font-family: 'Dancing Script', cursive;*/
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 35px;
+            float: right; 
+            padding-top: 25px;    
+            padding-right: 5%; 
+        }
+        .boton1{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 25px;
+            float:left;
+            border-style: none;
+            cursor: pointer;
+            margin-top: 25px; 
+            margin-left: 8.1%; 
+            padding: 5px;      
+            width:5%;
+            padding:10px;
+            color:rgb(255, 255, 255);
+            transition: all 0.9s; 
+            text-decoration: none;
+        }
+        .boton1:hover{
+            
+            color:rgb(25, 0, 255);
+
+        } 
+        .boton2{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 25px;
+            float:left;
+            border-style: none;
+            cursor: pointer;
+            margin-top: 25px; 
+            margin-left: 0px; 
+            padding: 5px;      
+            width:5%;
+            padding:10px;
+            color:rgb(255, 255, 255);
+            transition: all 0.9s; 
+            text-decoration: none;
+        }
+        .boton2:hover{
+            color:rgb(0, 4, 255);
+        }
+        .boton3{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 25px;
+            float:left;
+            border-style: none;
+            cursor: pointer;
+            margin-top: 25px; 
+            margin-left: 20px; 
+            padding: 5px;      
+            width:5%;
+            padding:10px;
+            color:rgb(255, 255, 255);
+            transition: all 0.9s; 
+            text-decoration: none;
+        }
+        .boton3:hover{
+            color:rgb(0, 4, 255);
+        }
+        .form{
+              background-color: rgba(0, 0, 0, 0.849);
+              margin: auto;
+              margin-top: 5%;
+              width: 90%;
+              max-width: 400px;
+              padding: 4.5em 3em;
+              border-radius: 10px;
+              box-shadow: 0 5px 10px -5px rgb(0 0 0/ 30%);
+              text-align: center;
+        }
+        .form__title{
+            font-size: 2rem;
+            margin-bottom: .5em;
+            color: #ffffff;
+            font-family: 'Roboto Condensed', sans-serif;
+        }  
+        .form__group{
+              position: relative;
+              --color:#ffffff;
+        }
+        .form__input{
+            width: 100%;
+            background: none;
+            color:#706c6c;
+            font-size: 1rem;
+            padding: 0.6em 0.3em;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid var(--color);
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        .form__input:not(:placeholder-shown){
+              color: #4d4646;
+        }.form__input:focus + .form__label,
+        .form__input:not(:placeholder-shown) + .form__label{
+            transform: translateY(-12px) scale(.7);
+            transform-origin: left top;
+            color: #3866f2
+        }
+    
+        .form__label{
+            color: var(--color);
+            cursor: pointer;
+            position: absolute;
+            top: -10px;
+            left: 5px;
+            transform: translateY(22px);
+            transition: transform .5s, color .3s;    
+        }
+        .form__submit{
+            background: #73a4ff56;
+            width: 120px;
+            color:rgb(255, 255, 255);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            padding: .8em 0;
+            border: none;
+            border-radius: .5em;
+            cursor: pointer;
+        }
+        .form__line{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #3866f2;
+            transform: scale(0);
+            transform: left bottom;
+            transition: transform .4s;
+        }
+        .form__input:focus ~ .form__label,
+        .form__input:not(:placeholder-shown) ~ .form__label{
+            transform: scale(1);
+        }
+        @media (max-width:425px){
+            .form__title{
+                font-size: 1.8rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a class="boton1" href="/">Inicio</a>
+        <a class="boton2" href="/registro">Registro</a>
+        <a class="boton3" href="/login">Ingresar</a>
+        <img src="public/img/logo.png">
+        <h1>ServiTools</h1>               
+    </header>
+    <form action="/login" method="post" class="form">
+        <h2 class="form__title">Ingresar</h2>
+        <div class="form__container"></div>                    
+            <div class="form__group">    
+                <input name="usuario" type="text" id="Usuario" class="form__input" placeholder=" " required>
+                <label for="Usuario" class="form__label">Usuario</label>
+            </div><br>
+            
+            <div class="form__group">    
+                <input name="contrasena" type="password" id="Contraseña" class="form__input" placeholder=" " required>
+                <label for="Contraseña" class="form__label">Contraseña</label>
+                <span class="form_line"></span>
+            </div><br>          
+            <input type="submit" class="form__submit" value="Ingresar">               
+        </div>   
+     </form>
+</body>
+</html>
